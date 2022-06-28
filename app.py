@@ -8,7 +8,7 @@ cors = CORS(app, resources={r"/": {"origins": "*.*"}})
 
 # ROTAS
 
-@app.route("/") 
+@app.route("/",  methods=['POST', 'GET']) 
 @cross_origin()
 def home():
     return jsonify({
